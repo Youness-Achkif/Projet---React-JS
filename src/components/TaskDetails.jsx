@@ -1,13 +1,17 @@
 import styles from './TaskDetails.module.css'
 
 function TaskDetails({ titre, description, priorite }) {
-  return (
-    <div className={styles.card}>
-      <h2>Titre: {titre}</h2>
-      <h2>Description: {description}</h2>
-      <h2>Priorité: {priorite}</h2>
-    </div>
-  );
+    const prioriteClass = priorite?.toLowerCase() === 'haute' ? styles.haute
+        : priorite?.toLowerCase() === 'moyenne' ? styles.moyenne
+        : styles.basse;
+
+    return (
+        <div className={`${styles.card} ${prioriteClass}`}>
+            <h2>Titre: {titre}</h2>
+            <h2>Description: {description}</h2>
+            <h2>Priorité: {priorite}</h2>
+        </div>
+    );
 }
 
 export default TaskDetails;

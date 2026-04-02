@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from './AddTask.module.css';
 
 function AddTask() {
     const [titre, setTitre] = useState("");
@@ -14,31 +15,44 @@ function AddTask() {
     }
 
     return (
-        <div>
-            <h1>Ajouter une tâche</h1>
-            <form onSubmit={handleSubmit}>
-                <label>Titre</label>
-                <input
-                    type="text"
-                    placeholder="Titre de la tâche"
-                    onChange={(e) => setTitre(e.target.value)}
-                />
-                <br />
-                <label>Description</label>
-                <input
-                    type="text"
-                    placeholder="Description de la tâche"
-                    onChange={(e) => setDescription(e.target.value)}
-                />
-                <br />
-                <label>Priorité</label>
-                <textarea
-                    rows="3"
-                    placeholder="Haute / Moyenne / Basse"
-                    onChange={(e) => setPriorite(e.target.value)}
-                />
-                <br />
-                <button type="submit">Ajouter</button>
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <h1>Ajouter une tâche</h1>
+                <p>Remplissez le formulaire pour créer une nouvelle tâche</p>
+            </div>
+
+            <form className={styles.form} onSubmit={handleSubmit}>
+                <div className={styles.field}>
+                    <label className={styles.label}>Titre</label>
+                    <input
+                        className={styles.input}
+                        type="text"
+                        placeholder="Titre de la tâche"
+                        onChange={(e) => setTitre(e.target.value)}
+                    />
+                </div>
+
+                <div className={styles.field}>
+                    <label className={styles.label}>Description</label>
+                    <input
+                        className={styles.input}
+                        type="text"
+                        placeholder="Description de la tâche"
+                        onChange={(e) => setDescription(e.target.value)}
+                    />
+                </div>
+
+                <div className={styles.field}>
+                    <label className={styles.label}>Priorité</label>
+                    <textarea
+                        className={styles.textarea}
+                        rows="3"
+                        placeholder="Haute / Moyenne / Basse"
+                        onChange={(e) => setPriorite(e.target.value)}
+                    />
+                </div>
+
+                <button className={styles.submitBtn} type="submit">Ajouter la tâche</button>
             </form>
         </div>
     );

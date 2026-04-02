@@ -1,0 +1,92 @@
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 8px;
+}
+
+.hero p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.sectionTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.counterRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.counterValue {
+    font-size: 28px;
+    font-weight: 800;
+    color: #6366f1;
+    min-width: 60px;
+    text-align: center;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btnPrimary {
+    background-color: #6366f1;
+    color: #ffffff;
+}
+
+.btnPrimary:hover {
+    background-color: #4f46e5;
+}
+
+.btnSecondary {
+    background-color: #e2e8f0;
+    color: #475569;
+}
+
+.btnSecondary:hover {
+    background-color: #cbd5e1;
+}
+
+.btnOutline {
+    background-color: transparent;
+    color: #6366f1;
+    border: 1px solid #6366f1;
+}
+
+.btnOutline:hover {
+    background-color: #eef2ff;
+}

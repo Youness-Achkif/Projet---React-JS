@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import styles from './About.module.css'
 
 function About() {
     const [todo, setTodo] = useState({});
@@ -10,17 +11,25 @@ function About() {
     }, []);
 
     return (
-        <div>
-            <h1>À propos</h1>
-            <p>Application de gestion de tâches développée avec React</p>
+        <div className={styles.container}>
+            <div className={styles.header}>
+                <h1>À propos</h1>
+                <p>Application de gestion de tâches développée avec React</p>
+            </div>
 
-            <h2>Exemple de tâche (API)</h2>
-            <ol>
-                <li>User ID: {todo.userId}</li>
-                <li>ID: {todo.id}</li>
-                <li>Titre: {todo.title}</li>
-                <li>Complété: {todo.completed?.toString()}</li>
-            </ol>
+            <div className={styles.card}>
+                <h2>Exemple de tâche (API)</h2>
+                {todo.id ? (
+                    <ol>
+                        <li>User ID: {todo.userId}</li>
+                        <li>ID: {todo.id}</li>
+                        <li>Titre: {todo.title}</li>
+                        <li>Complété: {todo.completed?.toString()}</li>
+                    </ol>
+                ) : (
+                    <p className={styles.loading}>Chargement...</p>
+                )}
+            </div>
         </div>
     );
 }

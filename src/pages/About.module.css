@@ -1,0 +1,57 @@
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 6px;
+}
+
+.header p {
+    color: #64748b;
+    font-size: 15px;
+    margin: 0;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 32px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.card h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.card ol {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card li {
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.loading {
+    color: #94a3b8;
+    font-style: italic;
+    font-size: 14px;
+}

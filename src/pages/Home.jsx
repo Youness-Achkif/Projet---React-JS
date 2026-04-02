@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import TaskDetails from './../components/TaskDetails'
 import TaskCard from './../components/TaskCard'
+import styles from './Home.module.css'
 
 function Home() {
     const [counter, setCounter] = useState(0);
@@ -20,37 +21,39 @@ function Home() {
     ];
 
     return (
-        <div>
-            <h1>Accueil</h1>
-            <p>Bienvenue sur le gestionnaire de tâches</p>
+        <div className={styles.container}>
+            <div className={styles.hero}>
+                <h1>Accueil</h1>
+                <p>Bienvenue sur le gestionnaire de tâches</p>
+            </div>
 
-            <div>
-                <h1>Section Compteur</h1>
-                <button
-                    onClick={() => {
-                        setCounter(counter + 1)
-                    }}
-                >
-                    Ajouter
-                </button>
-                <button
-                    onClick={() => {
-                        setCounter(counter - 1)
-                    }}
-                >
-                    Soustraire
-                </button>
-                <h2>Compteur: {counter}</h2>
+            <div className={styles.section}>
+                <h2 className={styles.sectionTitle}>Section Compteur</h2>
+                <div className={styles.counterRow}>
+                    <button
+                        className={`${styles.btn} ${styles.btnPrimary}`}
+                        onClick={() => setCounter(counter + 1)}
+                    >
+                        Ajouter
+                    </button>
+                    <button
+                        className={`${styles.btn} ${styles.btnSecondary}`}
+                        onClick={() => setCounter(counter - 1)}
+                    >
+                        Soustraire
+                    </button>
+                    <span className={styles.counterValue}>{counter}</span>
+                </div>
+            </div>
 
+            <div className={styles.section}>
+                <h2 className={styles.sectionTitle}>Liste des tâches</h2>
                 <button
-                    onClick={() => {
-                        setShowTasks(!showTasks);
-                    }}
+                    className={`${styles.btn} ${styles.btnOutline}`}
+                    onClick={() => setShowTasks(!showTasks)}
                 >
                     {showTasks ? 'Masquer les tâches' : 'Afficher les tâches'}
                 </button>
-
-                <h1>Liste des tâches</h1>
                 {
                     showTasks && tasks.map((task, id) => (
                         <TaskDetails
@@ -61,8 +64,10 @@ function Home() {
                         />
                     ))
                 }
+            </div>
 
-                <h1>Liste des catégories</h1>
+            <div className={styles.section}>
+                <h2 className={styles.sectionTitle}>Liste des catégories</h2>
                 {
                     categories.map((cat, id) => (
                         <TaskCard

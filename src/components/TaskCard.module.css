@@ -1,0 +1,33 @@
+.card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+}
+
+.card h2:first-child {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.badge {
+    background: #e0e7ff;
+    color: #4f46e5;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
