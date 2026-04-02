@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from './AddTask.module.css';
 
-function AddTask() {
+function AddTask({ onAdd }) {
     const [titre, setTitre] = useState("");
     const [description, setDescription] = useState("");
     const [priorite, setPriorite] = useState("");
+    const navigate = useNavigate();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -12,6 +14,9 @@ function AddTask() {
         console.log(titre);
         console.log(description);
         console.log(priorite);
+
+        onAdd({ titre, description, priorite });
+        navigate('/');
     }
 
     return (
@@ -52,7 +57,9 @@ function AddTask() {
                     />
                 </div>
 
-                <button className={styles.submitBtn} type="submit">Ajouter la tâche</button>
+                <button className={styles.submitBtn} type="submit">
+                    Ajouter la tâche
+                </button>
             </form>
         </div>
     );

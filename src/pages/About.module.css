@@ -1,57 +1,66 @@
 .container {
-    max-width: 700px;
-    margin: 40px auto;
-    padding: 0 24px;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 24px;
 }
 
 .header {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .header h1 {
-    font-size: 28px;
-    font-weight: 800;
-    color: #0f172a;
-    margin: 0 0 6px;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--text);
+  margin-bottom: 8px;
 }
 
 .header p {
-    color: #64748b;
-    font-size: 15px;
-    margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
 }
 
 .card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 28px 32px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
 }
 
 .card h2 {
-    font-size: 17px;
-    font-weight: 700;
-    color: #1e293b;
-    margin: 0 0 16px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid #e2e8f0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
 }
 
 .card ol {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .card li {
-    color: #475569;
-    font-size: 15px;
-    line-height: 1.5;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.card li::marker {
+  color: var(--accent);
 }
 
 .loading {
-    color: #94a3b8;
-    font-style: italic;
-    font-size: 14px;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
 }

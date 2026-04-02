@@ -18,7 +18,7 @@ function About() {
             </div>
 
             <div className={styles.card}>
-                <h2>Exemple de tâche (API)</h2>
+                <h2>Exemple de tâche — API JSONPlaceholder</h2>
                 {todo.id ? (
                     <ol>
                         <li>User ID: {todo.userId}</li>

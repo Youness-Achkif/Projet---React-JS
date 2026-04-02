@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface-2: #21262d;
+  --border: #30363d;
+  --accent: #f59e0b;
+  --accent-hover: #fbbf24;
+  --text: #f0f6fc;
+  --text-muted: #8b949e;
+  --success: #3fb950;
+  --danger: #f85149;
+  --info: #58a6ff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,9 +21,9 @@
 }
 
 body {
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  background-color: #f1f5f9;
-  color: #1e293b;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -19,4 +35,8 @@ body {
 
 main {
   flex: 1;
+}
+
+h1, h2, h3 {
+  font-family: 'Fraunces', Georgia, serif;
 }

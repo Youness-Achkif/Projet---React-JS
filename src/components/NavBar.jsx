@@ -4,7 +4,9 @@ import styles from './NavBar.module.css';
 function NavBar() {
     return (
         <nav className={styles.navbar}>
-            <h1 className={styles.logo}>✅ Gestionnaire de Tâches</h1>
+            <h1 className={styles.logo}>
+                <span className={styles.logoAccent}>✓</span> Task Manager
+            </h1>
             <div className={styles.links}>
                 <NavLink
                     to="/"

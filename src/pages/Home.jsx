@@ -3,14 +3,7 @@ import TaskDetails from './../components/TaskDetails'
 import TaskCard from './../components/TaskCard'
 import styles from './Home.module.css'
 
-function Home() {
-    const [counter, setCounter] = useState(0);
-    const [tasks, setTasks] = useState([
-        { titre: "Faire les courses", description: "Acheter des fruits et légumes", priorite: "Haute" },
-        { titre: "Réviser React", description: "Revoir les hooks useState et useEffect", priorite: "Haute" },
-        { titre: "Appeler le médecin", description: "Prendre rendez-vous pour le bilan annuel", priorite: "Moyenne" },
-        { titre: "Nettoyer l'appartement", description: "Passer l'aspirateur et faire la vaisselle", priorite: "Basse" },
-    ]);
+function Home({ tasks }) {
     const [showTasks, setShowTasks] = useState(true);
 
     const categories = [
@@ -23,31 +16,12 @@ function Home() {
     return (
         <div className={styles.container}>
             <div className={styles.hero}>
-                <h1>Accueil</h1>
-                <p>Bienvenue sur le gestionnaire de tâches</p>
+                <h1>Bienvenue sur <span>Task Manager</span></h1>
+                <p>Organisez vos tâches, boostez votre productivité.</p>
             </div>
 
             <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>Section Compteur</h2>
-                <div className={styles.counterRow}>
-                    <button
-                        className={`${styles.btn} ${styles.btnPrimary}`}
-                        onClick={() => setCounter(counter + 1)}
-                    >
-                        Ajouter
-                    </button>
-                    <button
-                        className={`${styles.btn} ${styles.btnSecondary}`}
-                        onClick={() => setCounter(counter - 1)}
-                    >
-                        Soustraire
-                    </button>
-                    <span className={styles.counterValue}>{counter}</span>
-                </div>
-            </div>
-
-            <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>Liste des tâches</h2>
+                <p className={styles.sectionTitle}>Liste des tâches ({tasks.length})</p>
                 <button
                     className={`${styles.btn} ${styles.btnOutline}`}
                     onClick={() => setShowTasks(!showTasks)}
@@ -67,7 +41,7 @@ function Home() {
             </div>
 
             <div className={styles.section}>
-                <h2 className={styles.sectionTitle}>Liste des catégories</h2>
+                <p className={styles.sectionTitle}>Liste des catégories</p>
                 {
                     categories.map((cat, id) => (
                         <TaskCard
