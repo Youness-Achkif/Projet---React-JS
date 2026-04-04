@@ -17,7 +17,7 @@ function Home({ tasks }) {
         <div className={styles.container}>
             <div className={styles.hero}>
                 <h1>Bienvenue sur <span>Task Manager</span></h1>
-                <p>Organisez vos tâches, boostez votre productivité.</p>
+                <p>Organisez vos tâches, boostez votre productivité facilement.</p>
             </div>
 
             <div className={styles.section}>
