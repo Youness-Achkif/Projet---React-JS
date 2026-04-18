@@ -4,7 +4,7 @@ Application web de gestion de tâches développée avec React JS dans le cadre d
 
 ## Aperçu
 
-Task Manager permet de visualiser, organiser et ajouter des tâches avec différents niveaux de priorité. L'interface adopte un design sombre et raffiné (dark theme) avec une palette amber.
+Task Manager permet de visualiser et organiser et ajouter des tâches avec différents niveaux de priorité. L'interface adopte un design sombre et raffiné (dark theme) avec une palette amber.
 
 ## Fonctionnalités
 
