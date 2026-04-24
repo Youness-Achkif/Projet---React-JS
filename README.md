@@ -13,7 +13,7 @@ Task Manager permet de visualiser et organiser et ajouter des tâches avec diff�
 - Masquer / afficher la liste des tâches
 - Afficher des catégories de tâches
 - Récupération de données externes via une API (JSONPlaceholder)
-- Page 404 pour les routes inconnues
+- Page 404 pour les routes inconnues.
 
 ## Technologies utilisées
 
